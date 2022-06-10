@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  // transition: 0.3s;
+}
+
+@font-face {
+  font-family: "Palagio";
+  src: url("./fonts/PalagioPersonalUse-nRoPM.otf");
+}
+
+@font-face {
+  font-family: "Circula";
+  src: url("./fonts/circula-medium.otf");
+}
+
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+html body {
+  margin: 0;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  /* Hide horizontal scrollbar */
+  scroll-behavior: smooth;
+  height: 100%;
+  transition: 0.3s;
+  font-family: "Circula";
+  font-weight: 400;
+  background-color: #E2E1CA;
+  // cursor: none;
+}
+
+body>iframe {
+  display: none !important;
+}
