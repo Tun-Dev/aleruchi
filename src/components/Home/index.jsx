@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Cursor } from "components/General Component";
 import { ikaBG } from "assets";
 import "./styles.scss";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   // let cursorRef = useRef(null);
@@ -46,7 +47,9 @@ const Home = () => {
             </h5>
           </div>
           <div className="links">
-            <li className="link">PROFILE</li>
+            <li className="link">
+              <Link to="/profile">PROFILE</Link>
+            </li>
             <li className="link">GALLERY</li>
             <li>ARTICLES</li>
           </div>

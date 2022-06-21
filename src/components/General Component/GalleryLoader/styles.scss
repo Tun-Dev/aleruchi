@@ -1,0 +1,26 @@
+.galcon {
+    // border: 1px solid red;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .innercon {
+        text-align: center;
+
+        h4 {
+            font-family: "Nympha Trial Reg";
+            font-size: 32px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        h5 {
+            font-family: "Nympha Trial Reg";
+            font-size: 55px;
+            font-weight: 500;
+            margin: 0;
+            margin-top: 10px;
+        }
+    }
+}
