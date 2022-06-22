@@ -13,7 +13,6 @@ export class Cursor {
     // Variables
     this.Cursor = el;
     this.Cursor.style.opacity = 0;
-    this.Links = document.querySelectorAll(".links");
 
     this.bounds = this.Cursor.getBoundingClientRect();
 
@@ -31,30 +30,15 @@ export class Cursor {
         mouse.y - this.bounds.height / 2;
 
       gsap.to(this.Cursor, {
-        duration: 0.9,
+        duration: 1,
         ease: "Power3.easeOut",
         opacity: 1,
       });
-
-      // this.onScaleMouse();
-
       requestAnimationFrame(() => this.render());
       window.removeEventListener("mousemove", this.onMouseMoveEv);
     };
     window.addEventListener("mousemove", this.onMouseMoveEv);
   }
-
-  // onScaleMouse() {
-  //   this.Links.forEach((link) => {
-  //     link.addEventListener("mouseenter", () => {
-  //       gsap.to(this.Cursor.children[0], {
-  //         duration: 0.6,
-  //         scale: 0.8,
-  //         ease: "Power3.easeOut",
-  //       });
-  //     });
-  //   });
-  // }
 
   enter() {
     this.renderedStyles["scale"].current = 2.5;

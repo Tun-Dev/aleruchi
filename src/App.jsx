@@ -1,12 +1,4 @@
-import "./App.scss";
-import {
-  Home,
-  GalleryLoader,
-  LandingLoader,
-  Profile,
-  Contact,
-  NavBar,
-} from "components";
+import { Home, Profile, Contact, Article, Gallery } from "components";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -27,6 +19,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/articles" element={<Article />} />
+            <Route path="/gallery" element={<Gallery />} />
           </Routes>
         </BrowserRouter>
       </>

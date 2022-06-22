@@ -109,32 +109,3 @@
         }
     }
 }
-
-.cursor {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 15;
-    // contain: layout style size;
-    pointer-events: none;
-    height: 20px;
-    width: 20px;
-    background: #4E3B1F;
-    // background: black;
-    border-radius: 50%;
-    // transform: translate(-50%, -50%);
-    display: block;
-
-    // &::before {
-    //     content: "";
-    //     position: absolute;
-    //     top: -44px;
-    //     left: -44px;
-    //     display: block;
-    //     width: 80px;
-    //     height: 80px;
-    //     transform: scale(0.2);
-    //     background: black;
-    //     border-radius: 100%;
-    // }
-}

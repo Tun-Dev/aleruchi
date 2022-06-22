@@ -43,7 +43,7 @@
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing:/ grayscale;
 }
 
 code {
@@ -53,14 +53,15 @@ code {
 
 html body {
   margin: 0;
+  // padding: 0;
   color: #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   /* Hide horizontal scrollbar */
   scroll-behavior: smooth;
-  height: 100%;
-  transition: 0.3s;
+  // height: 100%;
+  // transition: 0.3s;
   font-family: "Circula";
   font-weight: 400;
   background-color: #E2E1CA;
@@ -69,4 +70,36 @@ html body {
 
 body>iframe {
   display: none !important;
+}
+
+.cursor {
+  position: fixed;
+  // position: absolute;
+  // scroll-margin: 0;
+  // scroll-snap-type: mandatory;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  // contain: layout style size;
+  pointer-events: none;
+  height: 20px;
+  width: 20px;
+  background: #4E3B1F;
+
+  border-radius: 50%;
+
+  display: block;
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: -4px;
+  //   left: -4px;
+  //   display: block;
+  //   width: 25px;
+  //   height: 25px;
+  //   // transform: scale(0.2);
+  //   background: black;
+  //   border-radius: 100%;
+  // }
 }

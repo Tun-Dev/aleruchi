@@ -1,0 +1,55 @@
+.ArticleCard {
+    width: 350px;
+    // border: 1px solid red;
+    padding: 15px;
+    // height: 500px;
+
+    .inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top {
+        border: 3px solid #4E3B1F;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 10px 5px rgba(0, 0, 0, 0.5);
+        height: 444px;
+
+        h1 {
+            font-family: "SF Pro Text Regular";
+            font-size: 54px;
+            // border: 1px solid black;
+            // width: ;
+            margin: 0;
+        }
+
+        p {
+            font-family: "SF Pro Text Regular";
+            font-size: 20px;
+        }
+    }
+
+    .bottom {
+        margin-top: 15px;
+
+        button {
+            width: 221px;
+            height: 44px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            background: none;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+
+            h5 {
+                font-family: "SF Pro Text Regular";
+                font-size: 20px;
+                font-weight: 300;
+            }
+        }
+    }
+}

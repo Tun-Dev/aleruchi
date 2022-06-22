@@ -1,0 +1,15 @@
+.Articlecon {
+    display: flex;
+    flex-direction: column;
+
+
+    .inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        // align-items: left;
+        // flex-grow: 2;
+        // border: 1px solid red;
+        // height: 100vh;
+    }
+}

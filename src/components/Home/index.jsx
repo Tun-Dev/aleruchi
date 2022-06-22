@@ -48,10 +48,12 @@ const Home = () => {
           </div>
           <div className="links">
             <li className="link">
-              <Link to="/profile">PROFILE</Link>
+              <Link to="/profile">KINIKA</Link>
             </li>
             <li className="link">GALLERY</li>
-            <li>ARTICLES</li>
+            <li>
+              <Link to="/articles">ARTICLES</Link>
+            </li>
           </div>
         </div>
       </div>

@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./styles.scss";
+import { Cursor } from "components/General Component";
 import { NavBar } from "components/General Component";
 import { User } from "assets";
 
 const Profile = () => {
+  // let cursorRef = useRef(null);
+  useEffect(() => {
+    let cursorPick = document.querySelector(".cursor");
+    const cursor = new Cursor(cursorPick);
+
+    // document.querySelectorAll("li").forEach((link) => {
+    //   link.addEventListener("mouseenter", () => cursor.enter());
+    //   link.addEventListener("mouseleave", () => cursor.leave());
+    // });
+  });
   return (
     <>
+      <div className="cursor">
+        <div className="cursor__inner"></div>
+      </div>
       <div className="profilecon">
         <NavBar navTitle="Profile" />
         <div className="innercon">

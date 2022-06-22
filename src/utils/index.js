@@ -9,11 +9,10 @@ const getMousePos = (e) => {
   let posx = 0;
   let posy = 0;
   if (!e) e = window.event;
-  if (e.pageX || e.pageY) {
-    posx = e.pageX;
-    posy = e.pageY;
+  if (e.clientX || e.clientY) {
+    posx = e.clientX;
+    posy = e.clientY;
   }
-
   return { x: posx, y: posy };
 };
 
