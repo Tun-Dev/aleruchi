@@ -49,7 +49,7 @@ const NavBar = ({ navTitle }) => {
     var navtl = gsap.timeline({ paused: true });
 
     navtl.to(fullpageMenu, {
-      duration: 1,
+      duration: 0.7,
       // display: "block",
       height: "100vh",
       opacity: 1,
@@ -64,7 +64,7 @@ const NavBar = ({ navTitle }) => {
     });
     navtl.to([word, word2, word3, word4, word5, word6], {
       y: "0%",
-      duration: 0.7,
+      duration: 0.5,
       // skewX: 10,
       stagger: {
         each: 0.2,

@@ -21,8 +21,12 @@ const Article = () => {
         <NavBar navTitle="Articles" />
         <div className="inner">
           {data.length > 0 &&
-            data.map((word) => (
-              <ArticleCards header={word.header} summary={word.summary} />
+            data.map((word, index) => (
+              <ArticleCards
+                key={index}
+                header={word.header}
+                summary={word.summary}
+              />
             ))}
         </div>
       </div>
