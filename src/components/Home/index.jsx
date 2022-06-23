@@ -50,7 +50,9 @@ const Home = () => {
             <li className="link">
               <Link to="/profile">KINIKA</Link>
             </li>
-            <li className="link">GALLERY</li>
+            <li className="link">
+              <Link to="/gallery">GALLERY</Link>
+            </li>
             <li>
               <Link to="/articles">ARTICLES</Link>
             </li>

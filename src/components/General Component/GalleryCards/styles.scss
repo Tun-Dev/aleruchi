@@ -1,0 +1,22 @@
+.gallerycards {
+    // border: 1px solid red;
+    width: fit-content;
+    margin-bottom: 55px;
+
+    .inner {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 500px;
+        }
+
+        h5 {
+            font-family: "Nympha Trial Reg";
+            font-size: 20px;
+            font-weight: 400;
+            margin: 0;
+            margin-top: 39px;
+        }
+    }
+}

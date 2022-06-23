@@ -1,8 +1,10 @@
 .navcontainer2 {
     z-index: 10;
+    margin-bottom: 30px;
+    // border: 1px solid black;
 
     .wrapper2 {
-        height: 64px;
+        height: 80px;
         width: 90%;
         margin: 0 auto;
         display: flex;
@@ -96,6 +98,8 @@
 
         ul {
             list-style-type: none;
+            margin: 0;
+            padding-inline-start: 0;
         }
 
         li {
@@ -157,3 +161,39 @@
 }
 
 // @media screen and (max-width:767px) {}
+
+@media only screen and (max-width: 800px) {
+    .fullpage-menu {
+
+        .title {
+
+            .titleinner {
+
+                h5 {
+
+                    font-size: 25px;
+
+                }
+            }
+        }
+
+        nav {
+
+            li {
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+
+                +li {
+                    margin-top: 30px;
+                }
+
+                a {
+                    font-size: 44px;
+
+                }
+            }
+        }
+
+    }
+}

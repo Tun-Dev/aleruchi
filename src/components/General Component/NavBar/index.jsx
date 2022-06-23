@@ -119,7 +119,7 @@ const NavBar = ({ navTitle }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/profile" ref={(el) => (word3 = el)}>
+                  <Link to="/gallery" ref={(el) => (word3 = el)}>
                     <span data-clip="Gallery">Gallery</span>
                   </Link>
                 </li>
