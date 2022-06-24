@@ -1,9 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./styles.scss";
 import { NavBar, Cursor, GalleryCards } from "components/General Component";
+import useWindowSize from "utils/hooks";
 import { Data } from "./data";
 
 const Gallery = () => {
+  const gallery = useRef();
+  const scrollContainer = useRef();
+
+  const size = useWindowSize();
+
+  const skewConfigs = {
+    ease: 0.1,
+    current: 0,
+    previous: 0,
+    rounded: 0,
+  };
+
   useEffect(() => {
     let cursorPick = document.querySelector(".cursor");
     const cursor = new Cursor(cursorPick);
@@ -16,14 +29,42 @@ const Gallery = () => {
       link.addEventListener("mouseenter", () => cursor.enter());
       link.addEventListener("mouseleave", () => cursor.leave());
     });
+
+    document.body.style.height = `${
+      scrollContainer.current.getBoundingClientRect().height
+    }px`;
   });
+
+  // useEffect(() => {
+  //   // console.log(size.height);
+  // });
+
+  useEffect(() => {
+    requestAnimationFrame(() => skewScrolling());
+  }, []);
+
+  const skewScrolling = () => {
+    skewConfigs.current = window.scrollY;
+    skewConfigs.previous +=
+      (skewConfigs.current - skewConfigs.previous) * skewConfigs.ease;
+    skewConfigs.rounded = Math.round(skewConfigs.previous * 100) / 100;
+
+    const difference = skewConfigs.current - skewConfigs.rounded;
+    const acceleration = difference / size.width;
+    const velocity = +acceleration;
+    const skew = velocity * 7.5;
+
+    scrollContainer.current.style.transform = `translate3d(0, -${skewConfigs.rounded}px, 0) skewY(${skew}deg)`;
+
+    requestAnimationFrame(() => skewScrolling());
+  };
 
   return (
     <>
       <div className="cursor"></div>
-      <div className="gallerycon">
+      <div ref={gallery} className="gallerycon">
         <NavBar navTitle="Gallery" />
-        <div className="inner">
+        <div ref={scrollContainer} className="inner">
           {Data.map((d, index) => (
             <GalleryCards key={index} image={d.image} title={d.title} />
           ))}

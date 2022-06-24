@@ -3,10 +3,19 @@
     flex-direction: column;
     // border: 1px solid red;
     // height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    padding-bottom: 50px;
 
     .inner {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        margin-bottom: 50px;
     }
 }
