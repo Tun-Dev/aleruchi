@@ -25,23 +25,13 @@ const Gallery = () => {
       link.addEventListener("mouseenter", () => cursor.enter());
       link.addEventListener("mouseleave", () => cursor.leave());
     });
-    document.querySelectorAll("li").forEach((link) => {
+    document.querySelectorAll("img").forEach((link) => {
       link.addEventListener("mouseenter", () => cursor.enter());
       link.addEventListener("mouseleave", () => cursor.leave());
     });
 
-    document.body.style.height = `${
-      scrollContainer.current.getBoundingClientRect().height
-    }px`;
-  });
-
-  // useEffect(() => {
-  //   // console.log(size.height);
-  // });
-
-  useEffect(() => {
     requestAnimationFrame(() => skewScrolling());
-  }, []);
+  });
 
   const skewScrolling = () => {
     skewConfigs.current = window.scrollY;
@@ -54,7 +44,7 @@ const Gallery = () => {
     const velocity = +acceleration;
     const skew = velocity * 7.5;
 
-    scrollContainer.current.style.transform = `translate3d(0, -${skewConfigs.rounded}px, 0) skewY(${skew}deg)`;
+    scrollContainer.current.style.transform = `skewY(${skew}deg)`;
 
     requestAnimationFrame(() => skewScrolling());
   };
