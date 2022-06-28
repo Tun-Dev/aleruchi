@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./styles.scss";
 import { Cursor } from "components/General Component";
-import { NavBar } from "components/General Component";
+import { NavBar, NavBar2 } from "components/General Component";
 import { User } from "assets";
 
 const Profile = () => {
@@ -10,10 +10,10 @@ const Profile = () => {
     let cursorPick = document.querySelector(".cursor");
     const cursor = new Cursor(cursorPick);
 
-    // document.querySelectorAll("li").forEach((link) => {
-    //   link.addEventListener("mouseenter", () => cursor.enter());
-    //   link.addEventListener("mouseleave", () => cursor.leave());
-    // });
+    document.querySelectorAll("h1").forEach((link) => {
+      link.addEventListener("mouseenter", () => cursor.enter());
+      link.addEventListener("mouseleave", () => cursor.leave());
+    });
   });
   return (
     <>
@@ -21,7 +21,8 @@ const Profile = () => {
         <div className="cursor__inner"></div>
       </div>
       <div className="profilecon">
-        <NavBar navTitle="Profile" />
+        {/* <NavBar navTitle="Profile" /> */}
+        <NavBar2 link1="gallery" />
         <div className="innercon">
           <div className="left">
             <img src={User} alt="" />

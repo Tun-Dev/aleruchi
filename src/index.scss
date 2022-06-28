@@ -61,12 +61,16 @@ html body {
   /* Hide horizontal scrollbar */
   scroll-behavior: smooth;
   // height: 100%;
-  // transition: 0.3s;
+  transition: 0.3s;
   font-family: "Circula";
   font-weight: 400;
   background-color: #E2E1CA;
   // cursor: none;
 }
+
+// body {
+//   height: 100vh;
+// }
 
 body>iframe {
   display: none !important;
@@ -102,4 +106,23 @@ body>iframe {
   //   background: black;
   //   border-radius: 100%;
   // }
+}
+
+.page-enter {
+  opacity: 0;
+}
+
+.page-enter-active {
+  opacity: 1;
+  transition: opacity 400ms;
+  transition-delay: 600ms;
+}
+
+.page-exit {
+  opacity: 1;
+}
+
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 400ms;
 }

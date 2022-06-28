@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./styles.scss";
 import gsap from "gsap/dist/gsap";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 // import { Expo } from "gsap/dist/gsap";
 
 const NavBar = ({ navTitle }) => {
@@ -21,6 +21,7 @@ const NavBar = ({ navTitle }) => {
 
   useEffect(() => {
     var menuToggle = document.getElementById("menuToggle");
+    var linkk = document.getElementById("linkk");
 
     var menubar = gsap.timeline({ paused: true });
 
@@ -68,12 +69,18 @@ const NavBar = ({ navTitle }) => {
       // skewX: 10,
       stagger: {
         each: 0.2,
+        // amount: 0.15,
       },
     });
 
     navtl.reverse();
 
     menuToggle.addEventListener("click", () => {
+      menubar.reversed(!menubar.reversed());
+      navtl.reversed(!navtl.reversed());
+    });
+    linkk.addEventListener("click", (e) => {
+      // e.preventDefault();q234567890-
       menubar.reversed(!menubar.reversed());
       navtl.reversed(!navtl.reversed());
     });
@@ -110,7 +117,9 @@ const NavBar = ({ navTitle }) => {
               <ul className="main-menu">
                 <li>
                   <Link to="/" ref={(el) => (word = el)}>
-                    <span data-clip="Home">Home</span>
+                    <span data-clip="Home" id="linkk">
+                      Home
+                    </span>
                   </Link>
                 </li>
                 <li>
@@ -147,4 +156,23 @@ const NavBar = ({ navTitle }) => {
   );
 };
 
-export { NavBar };
+const NavBar2 = ({ link1, link2, link3 }) => {
+  return (
+    <>
+      <nav className="navbar3">
+        <div className="wrapper3">
+          <div className="left">
+            <NavLink to="/">ALE</NavLink>
+          </div>
+          <div className="right">
+            <NavLink to={`/${link1}`}>{link1}</NavLink>
+            <NavLink to={`/${link2}`}>{link2}</NavLink>
+            <NavLink to={`/${link3}`}>{link3}</NavLink>
+          </div>
+        </div>
+      </nav>
+    </>
+  );
+};
+
+export { NavBar, NavBar2 };

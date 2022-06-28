@@ -2,15 +2,27 @@
     display: flex;
     flex-direction: column;
     // border: 1px solid red;
-    // height: 100%;
 
 
     // padding-bottom: 50px;
+    // position: fixed;
+    // margin-top: 80px;
+    // top: 0;
+    // left: 0;
+    // height: 100%;
+    // width: 100%;
+    // overflow: scroll;
+    // overflow: hidden;
+
+
+
 
     .inner {
+
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         // margin-bottom: 50px;
+
     }
 }

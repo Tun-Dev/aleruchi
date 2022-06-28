@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import "./styles.scss";
 import { NavBar, Cursor, GalleryCards } from "components/General Component";
+// import { ScrollbarPlugin } from "smooth-scrollbar";
 import useWindowSize from "utils/hooks";
 import { Data } from "./data";
 
 const Gallery = () => {
-  const gallery = useRef();
+  const app = useRef();
   const scrollContainer = useRef();
 
   const size = useWindowSize();
@@ -17,18 +18,20 @@ const Gallery = () => {
     rounded: 0,
   };
 
-  useEffect(() => {
-    let cursorPick = document.querySelector(".cursor");
-    const cursor = new Cursor(cursorPick);
+  useEffect(() => {}, []);
 
-    document.querySelectorAll("button").forEach((link) => {
-      link.addEventListener("mouseenter", () => cursor.enter());
-      link.addEventListener("mouseleave", () => cursor.leave());
-    });
-    document.querySelectorAll("img").forEach((link) => {
-      link.addEventListener("mouseenter", () => cursor.enter());
-      link.addEventListener("mouseleave", () => cursor.leave());
-    });
+  useEffect(() => {
+    // let cursorPick = document.querySelector(".cursor");
+    // const cursor = new Cursor(cursorPick);
+
+    // document.querySelectorAll("button").forEach((link) => {
+    //   link.addEventListener("mouseenter", () => cursor.enter());
+    //   link.addEventListener("mouseleave", () => cursor.leave());
+    // });
+    // document.querySelectorAll("img").forEach((link) => {
+    //   link.addEventListener("mouseenter", () => cursor.enter());
+    //   link.addEventListener("mouseleave", () => cursor.leave());
+    // });
 
     requestAnimationFrame(() => skewScrolling());
   });
@@ -51,9 +54,9 @@ const Gallery = () => {
 
   return (
     <>
-      <div className="cursor"></div>
-      <div ref={gallery} className="gallerycon">
-        <NavBar navTitle="Gallery" />
+      {/* <div className="cursor"></div> */}
+      <div ref={app} className="gallerycon" id="my-scrollbar">
+        {/* <NavBar navTitle="Gallery" /> */}
         <div ref={scrollContainer} className="inner">
           {Data.map((d, index) => (
             <GalleryCards key={index} image={d.image} title={d.title} />

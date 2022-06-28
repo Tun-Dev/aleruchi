@@ -18,7 +18,7 @@ const Article = () => {
     <>
       <div className="cursor"></div>
       <div className="Articlecon">
-        <NavBar navTitle="Articles" />
+        {/* <NavBar navTitle="Articles" /> */}
         <div className="inner">
           {data.length > 0 &&
             data.map((word, index) => (
