@@ -48,7 +48,7 @@ const Home = () => {
           </div>
           <div className="links">
             <li className="link">
-              <Link to="/profile">KINIKA</Link>
+              <Link to="/kinika">KINIKA</Link>
             </li>
             <li className="link">
               <Link to="/gallery">GALLERY</Link>

@@ -160,12 +160,12 @@ const NavBar2 = ({ link1, link2, link3 }) => {
   return (
     <>
       <nav className="navbar3">
-        <div className="wrapper3">
-          <div className="left">
+        <div className="inner">
+          <div className="innerleft">
             <NavLink to="/">ALE</NavLink>
           </div>
-          <div className="right">
-            <NavLink to={`/${link1}`}>{link1}</NavLink>
+          <div className="innerright">
+            <NavLink to={`/${link1.toLowerCase()}`}>{link1}</NavLink>
             <NavLink to={`/${link2}`}>{link2}</NavLink>
             <NavLink to={`/${link3}`}>{link3}</NavLink>
           </div>

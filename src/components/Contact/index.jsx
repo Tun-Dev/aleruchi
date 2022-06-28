@@ -5,40 +5,38 @@ import { NavBar, NavBar2 } from "components/General Component";
 import "./styles.scss";
 
 const Contact = () => {
-  // useEffect(() => {
-  //   let cursorPick = document.querySelector(".cursor");
-  //   const cursor = new Cursor(cursorPick);
+  useEffect(() => {
+    let cursorPick = document.querySelector(".cursor");
+    const cursor = new Cursor(cursorPick);
 
-  //   document.querySelectorAll("a").forEach((link) => {
-  //     link.addEventListener("mouseenter", () => cursor.enter());
-  //     link.addEventListener("mouseleave", () => cursor.leave());
-  //   });
+    document.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("mouseenter", () => cursor.enter());
+      link.addEventListener("mouseleave", () => cursor.leave());
+    });
 
-  //   // document.getElementById("hamburger").forEach((link) => {
-  //   //   link.addEventListener("mouseenter", () => cursor.enter());
-  //   //   link.addEventListener("mouseleave", () => cursor.leave());
-  //   // });
+    // document.getElementById("hamburger").forEach((link) => {
+    //   link.addEventListener("mouseenter", () => cursor.enter());
+    //   link.addEventListener("mouseleave", () => cursor.leave());
+    // });
 
-  //   // let nav = document.getElementById("hamburger");
+    // let nav = document.getElementById("hamburger");
 
-  //   // nav.addEventListener("mouseenter", () => cursor.enter());
-  //   // nav.addEventListener("mouseleave", () => cursor.leave());
+    // nav.addEventListener("mouseenter", () => cursor.enter());
+    // nav.addEventListener("mouseleave", () => cursor.leave());
 
-  //   // let links = document.querySelectorAll("li");
-  //   // links.forEach((link) => {
-  //   //   link.addEventListener("mouseenter", () => cursor.enter());
-  //   //   link.addEventListener("mouseleave", () => cursor.leave());
-  //   // });
-  // });
+    // let links = document.querySelectorAll("li");
+    // links.forEach((link) => {
+    //   link.addEventListener("mouseenter", () => cursor.enter());
+    //   link.addEventListener("mouseleave", () => cursor.leave());
+    // });
+  });
 
   return (
     <>
-      {/* <div className="cursor">
-        <div className="cursor__inner"></div>
-      </div> */}
+      <div className="cursor"></div>
       <div className="contactcon">
         {/* <NavBar /> */}
-        <NavBar2 />
+        <NavBar2 link1="Kinika" link2="Gallery" link3="Articles" />
         <div className="innercon">
           <div className="top">
             <h1>Contact:</h1>

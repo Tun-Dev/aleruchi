@@ -1,6 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import "./styles.scss";
-import { NavBar, Cursor, GalleryCards } from "components/General Component";
+import {
+  NavBar,
+  NavBar2,
+  Cursor,
+  GalleryCards,
+} from "components/General Component";
 // import { ScrollbarPlugin } from "smooth-scrollbar";
 import useWindowSize from "utils/hooks";
 import { Data } from "./data";
@@ -18,20 +23,22 @@ const Gallery = () => {
     rounded: 0,
   };
 
-  useEffect(() => {}, []);
-
   useEffect(() => {
-    // let cursorPick = document.querySelector(".cursor");
-    // const cursor = new Cursor(cursorPick);
+    let cursorPick = document.querySelector(".cursor");
+    const cursor = new Cursor(cursorPick);
 
-    // document.querySelectorAll("button").forEach((link) => {
-    //   link.addEventListener("mouseenter", () => cursor.enter());
-    //   link.addEventListener("mouseleave", () => cursor.leave());
-    // });
-    // document.querySelectorAll("img").forEach((link) => {
-    //   link.addEventListener("mouseenter", () => cursor.enter());
-    //   link.addEventListener("mouseleave", () => cursor.leave());
-    // });
+    document.querySelectorAll("button").forEach((link) => {
+      link.addEventListener("mouseenter", () => cursor.enter());
+      link.addEventListener("mouseleave", () => cursor.leave());
+    });
+    document.querySelectorAll("img").forEach((link) => {
+      link.addEventListener("mouseenter", () => cursor.enter());
+      link.addEventListener("mouseleave", () => cursor.leave());
+    });
+    document.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("mouseenter", () => cursor.enter());
+      link.addEventListener("mouseleave", () => cursor.leave());
+    });
 
     requestAnimationFrame(() => skewScrolling());
   });
@@ -54,9 +61,10 @@ const Gallery = () => {
 
   return (
     <>
-      {/* <div className="cursor"></div> */}
+      <div className="cursor"></div>
       <div ref={app} className="gallerycon" id="my-scrollbar">
         {/* <NavBar navTitle="Gallery" /> */}
+        <NavBar2 link1="Kinika" link2="Articles" link3="Contact" />
         <div ref={scrollContainer} className="inner">
           {Data.map((d, index) => (
             <GalleryCards key={index} image={d.image} title={d.title} />

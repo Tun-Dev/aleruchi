@@ -15,7 +15,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const routes = [
   { path: "/", name: "Home", Component: Home },
-  { path: "/profile", name: "Profile", Component: Profile },
+  { path: "/kinika", name: "Profile", Component: Profile },
   { path: "/contact", name: "Contact", Component: Contact },
   { path: "/articles", name: "Article", Component: Article },
   { path: "/gallery", name: "Gallery", Component: Gallery },
@@ -24,34 +24,34 @@ const routes = [
 function App() {
   const [transitionState, setTransitionState] = useState(false);
 
-  useEffect(() => {
-    // let cursorPick = document.querySelector(".cursor");
-    // const cursor = new Cursor(cursorPick);
-    // document.querySelectorAll("a").forEach((link) => {
-    //   link.addEventListener("mouseenter", () => cursor.enter());
-    //   link.addEventListener("mouseleave", () => cursor.leave());
-    // });
-    // document.querySelectorAll("button").forEach((link) => {
-    //   link.addEventListener("mouseenter", () => cursor.enter());
-    //   link.addEventListener("mouseleave", () => cursor.leave());
-    // });
-    // document.querySelectorAll("img").forEach((link) => {
-    //   link.addEventListener("mouseenter", () => cursor.enter());
-    //   link.addEventListener("mouseleave", () => cursor.leave());
-    // });
-    // document.getElementById("hamburger").forEach((link) => {
-    //   link.addEventListener("mouseenter", () => cursor.enter());
-    //   link.addEventListener("mouseleave", () => cursor.leave());
-    // });
-    // let nav = document.getElementById("hamburger");
-    // nav.addEventListener("mouseenter", () => cursor.enter());
-    // nav.addEventListener("mouseleave", () => cursor.leave());
-    // let links = document.querySelectorAll("li");
-    // links.forEach((link) => {
-    //   link.addEventListener("mouseenter", () => cursor.enter());
-    //   link.addEventListener("mouseleave", () => cursor.leave());
-    // });
-  });
+  // useEffect(() => {
+  // let cursorPick = document.querySelector(".cursor");
+  // const cursor = new Cursor(cursorPick);
+  // document.querySelectorAll("a").forEach((link) => {
+  //   link.addEventListener("mouseenter", () => cursor.enter());
+  //   link.addEventListener("mouseleave", () => cursor.leave());
+  // });
+  // document.querySelectorAll("button").forEach((link) => {
+  //   link.addEventListener("mouseenter", () => cursor.enter());
+  //   link.addEventListener("mouseleave", () => cursor.leave());
+  // });
+  // document.querySelectorAll("img").forEach((link) => {
+  //   link.addEventListener("mouseenter", () => cursor.enter());
+  //   link.addEventListener("mouseleave", () => cursor.leave());
+  // });
+  // document.getElementById("hamburger").forEach((link) => {
+  //   link.addEventListener("mouseenter", () => cursor.enter());
+  //   link.addEventListener("mouseleave", () => cursor.leave());
+  // });
+  // let nav = document.getElementById("hamburger");
+  // nav.addEventListener("mouseenter", () => cursor.enter());
+  // nav.addEventListener("mouseleave", () => cursor.leave());
+  // let links = document.querySelectorAll("li");
+  // links.forEach((link) => {
+  //   link.addEventListener("mouseenter", () => cursor.enter());
+  //   link.addEventListener("mouseleave", () => cursor.leave());
+  // });
+  // });
 
   // const onEnter = (node) => {
   //   gsap.from(

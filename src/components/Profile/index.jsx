@@ -10,7 +10,7 @@ const Profile = () => {
     let cursorPick = document.querySelector(".cursor");
     const cursor = new Cursor(cursorPick);
 
-    document.querySelectorAll("h1").forEach((link) => {
+    document.querySelectorAll("a").forEach((link) => {
       link.addEventListener("mouseenter", () => cursor.enter());
       link.addEventListener("mouseleave", () => cursor.leave());
     });
@@ -22,7 +22,7 @@ const Profile = () => {
       </div>
       <div className="profilecon">
         {/* <NavBar navTitle="Profile" /> */}
-        <NavBar2 link1="gallery" />
+        <NavBar2 link1="Gallery" link2="Articles" link3="Contact" />
         <div className="innercon">
           <div className="left">
             <img src={User} alt="" />
